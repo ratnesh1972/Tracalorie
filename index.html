@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracalorie : Manage your daily calories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        referrerpolicy="no-referrer" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        .show {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="light blue">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center">Tracalorie</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a class="btn light-blue clear">Clear Task</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Add item form card -->
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col m12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Add Meal/ Food Item</span>
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+                                <input id="item" type="text" placeholder="Add Meal"> <label for="item">Meal</label>
+                            </div>
+                            <div class="input-field col s12 m6">
+                                <input id="calories" type="number" placeholder="Add Calories">
+                                <label for="calories">Calories</label>
+                            </div>
+
+                        </div>
+                        <div id="addStateBtn" class="row">
+                            <div class="col m6">
+                                <button id="addItem" class="btn light-blue"><i class="fas fa-plus"></i> Add
+                                    Item</button>
+                            </div>
+                        </div>
+                        <div id="editStateBtn" class="row hide">
+                            <div class="col m12">
+                                <input type="hidden" id="item_id">
+                                <button id="editItem" class="btn orange"><i class="far fa-edit"></i> Edit Item</button>
+                                <button id="deleteItem" class="btn red"><i class="fas fa-trash-alt"></i> Delete
+                                    Item</button>
+                                <button id="backItem" class="btn grey right"><i class="fas fa-arrow-left"></i> Go
+                                    Back</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col m12">
+                <h2 class="center">Total Calories : <span id="totalCalories"></span></h2>
+                <ul id="itemList" class="collection with-header">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="app_module.js"></script>
+</body>
+
+</html>
